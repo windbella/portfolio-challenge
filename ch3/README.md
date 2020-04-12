@@ -91,3 +91,5 @@ app.use('/', indexRouter);
 - *로 설정했기 때문에 /아래의 모든 주소가 client/dist/index.html로 연결되게 됩니다.
 - 다만 static 설정이 먼저기 때문에 일반 파일들은 정상적으로 서비스됩니다.
 - 이제 yarn start 명령어로 실행하면 서버에서 클라이언트에서 생성된 리소스가 서비스되는 것을 확인 가능합니다.
+## 링크
+- [Chepter 2 - ESLint로 코딩 스타일 관리하기](https://github.com/windbella/portfolio-challenge/tree/master/ch2)
