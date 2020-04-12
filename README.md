@@ -2,3 +2,4 @@
 - vscode를 기준으로 작성했습니다.
 - vue와 express를 이용합니다.
 - 각 챕터의 README.md에 자세한 설명이 있습니다.
+- 소스 코드 확인은 각 git clone 후 각 챕터 디렉터리를 vscode로 열면 됩니다.
