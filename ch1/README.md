@@ -72,4 +72,6 @@
 - yarn serve를 입력하면 개발용 서버가 실행이 됩니다.
 - yarn build를 입력하면 서버에서 사용할 리소스가 생성됩니다.
 - yarn lint를 입력하면 코딩 스타일을 점검합니다.
-- 각 server, client 디렉터리에 보면 package.json이라는 문서가 있는데 내용 중 scripts 안의 내용이 사용 가능한 명령어들입니다.
+- 각 server, client 디렉터리에 보면 package.json이라는 문서가 있는데 내용 중 scripts 안의 내용이 사용 가능한 명령어들입니다.  
+## 링크
+- [Chepter 2 - ESLint로 코딩 스타일 관리하기](https://github.com/windbella/portfolio-challenge/tree/master/ch2)
