@@ -9,7 +9,7 @@
 - server 디렉터리로 이동 후 yarn add --dev eslint eslint-plugin-import eslint-config-airbnb-base를 입력합니다.
 - 3가지 모듈을 설치한 이유는 위 링크에 설명되어 있습니다.
 - 설치가 완료되었으면 client의 .eslintrc.js 파일을 server에도 복사해옵니다.
-- 그리고 extends의 내용을 ['airbnb-base']로 변경합니다.
+- 그리고 .eslintrc.js 파일을 열고 extends의 내용을 ['airbnb-base']로 변경합니다.
 - parserOptions 부분도 삭제합니다.
 - package.json 파일을 열고 scripts에 "lint": "eslint **/{www,*.js}"라는 명령어를 추가합니다.
 - yarn lint 명령어를 입력합니다.
