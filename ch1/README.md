@@ -9,6 +9,10 @@
 - https://nodejs.org/en/
 - 위 사이트에서 node를 다운로드해서 설치합니다.
 - LTS로 선택하여 다운로드하면 되고, 현재 버전은 12.16.2입니다.
+## powershell 설정하기 (윈도우)
+- 윈도우 검색 버튼을 클릭하고 powershell을 입력합니다.
+- powershell을 관리자로 실행합니다.
+- Set-ExecutionPolicy Unrestricted 명령어를 입력하면 vscode에서 생길 수 있는 권한 문제가 해결됩니다.
 ## 프로젝트 생성 준비하기
 - 원하는 위치에 원하는 이름의 디렉터리를 생성합니다.
 - vscode를 실행하고 상단 바의 File > Open Folder... 를 선택하여 생성한 디렉터리를 엽니다.
