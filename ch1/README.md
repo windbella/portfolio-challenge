@@ -21,10 +21,10 @@
 - 다른 것으로 설정되어 있다면 Select Default Shell을 선택하여 powershell로 변경해 줍니다. (편의상의 설정이지 안 해도 상관은 없습니다.)
 - 이제 터미널에 node --version를 입력합니다. 버전이 정상적으로 출력되면 노드가 성공적으로 설치된것 입니다.
 - http://expressjs.com/en/starter/generator.html
-- 위 사이트를 참조하여 expressjs 생성기를 설치합니다.
+- expressjs 생성기를 설치합니다. (더 자세한 내용을 알기 위해서는 위 사이트를 참조하세요.)
 - 터미널에 npm install -g express-generator를 입력하면 진행됩니다.
 - https://cli.vuejs.org/guide/prototyping.html
-- 위 사이트를 참조하여 vue cli를 설치합니다.
+- vue cli를 설치합니다. (더 자세한 내용을 알기 위해서는 위 사이트를 참조하세요.)
 - 터미널에 npm install -g @vue/cli @vue/cli-service-global을 입력하면 진행됩니다.
 - yarn도 설치합니다. npm install -g yarn을 입력하면 진행됩니다.
 - 혹시 설치가 잘되지 않으면 관리자 권한을 가진 터미널을 실행하여 진행하거나, 리눅스 환경의 경우 sudo를 이용합니다.
