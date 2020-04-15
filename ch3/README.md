@@ -93,3 +93,4 @@ app.use('/', indexRouter);
 - 이제 yarn start 명령어로 실행하면 서버에서 클라이언트에서 생성된 리소스가 서비스되는 것을 확인 가능합니다.
 ## 링크
 - [Chepter 2 - ESLint로 코딩 스타일 관리하기](https://github.com/windbella/portfolio-challenge/tree/master/ch2)
+- [Chepter 4 - 내비게이션 바와 뷰 라우터 배우기](https://github.com/windbella/portfolio-challenge/tree/master/ch4)
