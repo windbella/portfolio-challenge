@@ -3,10 +3,10 @@
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">
-                    About
+                    Work
                 </h1>
                 <h2 class="subtitle">
-                    This is an about page
+                    This is an work page
                 </h2>
             </div>
         </div>

@@ -1,5 +1,5 @@
 <template>
-    <section class="hero is-success is-fullheight-with-navbar">
+    <article class="hero is-fullheight-with-navbar">
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">
@@ -10,13 +10,5 @@
                 </h2>
             </div>
         </div>
-    </section>
+    </article>
 </template>
-
-<script>
-export default {
-    name: 'Home',
-    components: {
-    },
-};
-</script>

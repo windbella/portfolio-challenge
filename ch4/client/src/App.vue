@@ -1,7 +1,9 @@
 <template>
     <div id="app">
         <Nav />
-        <router-view/>
+        <section class="pf-content">
+            <router-view/>
+        </section>
     </div>
 </template>
 
@@ -16,4 +18,11 @@ export default {
 };
 </script>
 
-<style lang="css" src="./app.css" />
+<style lang="css">
+    @media screen and (min-width: 1024px) {
+        .pf-content {
+            width: 1024px;
+            margin: 0 auto;
+        }
+    }
+</style>
