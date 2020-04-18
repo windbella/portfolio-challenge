@@ -9,8 +9,10 @@
                 <a
                     role="button"
                     class="navbar-burger burger"
+                    :class="{ 'is-active': isActive }"
                     aria-label="menu"
-                    aria-expanded="false"
+                    :aria-expanded="isActive.toString()"
+                    @click="toggleMenu"
                 >
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -18,7 +20,7 @@
                 </a>
             </div>
 
-            <div class="navbar-menu">
+            <div class="navbar-menu" :class="{ 'is-active': isActive }">
                 <div class="navbar-start">
                     <router-link to="/home" class="navbar-item">
                         Home
@@ -34,11 +36,9 @@
                 </div>
 
                 <div class="navbar-end">
-                    <div class="navbar-item">
-                        <a class="button is-white is-small is-outlined">
-                            Resume
-                        </a>
-                    </div>
+                    <a class="navbar-item">
+                        Resume
+                    </a>
                 </div>
             </div>
         </div>
@@ -48,6 +48,17 @@
 <script>
 export default {
     name: 'Nav',
+    data() {
+        return {
+            isActive: false,
+        };
+    },
+    methods: {
+        toggleMenu(event) {
+            event.preventDefault();
+            this.isActive = !this.isActive;
+        },
+    },
 };
 </script>
 
