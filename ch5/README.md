@@ -125,6 +125,7 @@ class의 경우는 일반적인 html의 속성이고 :class는 스크립트의 �
 - :[key]가 data와 연결된다면 @[event]는 method와 연결됩니다.
 - 해당 코드가 있는 태그를 클릭할 때마다 @click에 연결된 toggleMenu가 실행되어 isActive가 toggle 되게 되고
 그로 인해서 화면이 다시 그려져 메뉴가 활성화되었다다 비활성화되었다 하게 됩니다.
+- 마찬가지로 @[event]는 v-on:[event]의 약어입니다.
 - https://kr.vuejs.org/v2/guide/events.html
 - 이벤트에 관련된 내용은 위 페이지에서 추가로 확인 가능합니다.
 
