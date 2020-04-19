@@ -54,10 +54,10 @@ export default {
                 <a
                     role="button"
                     class="navbar-burger burger"
-                    :class="{ 'is-active': isActive }" <!-- 추가 -->
+                    :class="{ 'is-active': isActive }" // 추가
                     aria-label="menu"
-                    :aria-expanded="isActive.toString()" <!-- 수정 -->
-                    @click="toggleMenu" <!-- 추가 -->
+                    :aria-expanded="isActive.toString()" // 수정
+                    @click="toggleMenu" // 추가
                 >
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -65,7 +65,7 @@ export default {
                 </a>
             </div>
 
-            <div class="navbar-menu" :class="{ 'is-active': isActive }"> <!-- 수정 -->
+            <div class="navbar-menu" :class="{ 'is-active': isActive }"> // 수정
                 <div class="navbar-start">
                     <router-link to="/home" class="navbar-item">
                         Home
@@ -81,7 +81,7 @@ export default {
                 </div>
 
                 <div class="navbar-end">
-                    <a class="navbar-item"> <!-- 구조 변경 -->
+                    <a class="navbar-item"> // 구조 변경
                         Resume
                     </a>
                 </div>
