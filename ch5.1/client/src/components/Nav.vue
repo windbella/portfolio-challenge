@@ -1,6 +1,6 @@
 <template>
-    <nav class="navbar is-primary is-fixed-top" role="navigation" aria-label="main navigation">
-        <div class="container">
+    <nav class="pf-nav has-background-primary">
+        <div class="navbar is-primary" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="/">
                     <img src="../assets/logo.png" width="28" height="28">
@@ -61,3 +61,21 @@ export default {
     },
 };
 </script>
+
+<style lang="css">
+    @media screen and (min-width: 1024px) {
+        .pf-nav .navbar {
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+    }
+
+    .pf-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 30;
+        background-color: #fff;
+    }
+</style>
