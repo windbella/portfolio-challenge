@@ -9,3 +9,4 @@
 - [Chepter 3 - 서버에서 클라이언트 리소스 서비스하기](https://github.com/windbella/portfolio-challenge/tree/master/ch3)
 - [Chepter 4 - 내비게이션 바와 뷰 라우터 배우기](https://github.com/windbella/portfolio-challenge/tree/master/ch4)
 - [Chepter 5 - 뷰의 기초를 배우고 버튼 동작하게 하기](https://github.com/windbella/portfolio-challenge/tree/master/ch5)
+- [Chepter 5.1 - 마크업 업데이트](https://github.com/windbella/portfolio-challenge/tree/master/ch5.1)
