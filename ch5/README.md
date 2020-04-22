@@ -131,3 +131,4 @@ class의 경우는 일반적인 html의 속성이고 :class는 스크립트의 �
 
 ## 링크
 - [Chepter 4 - 내비게이션 바와 뷰 라우터 배우기](https://github.com/windbella/portfolio-challenge/tree/master/ch4)
+- [Chepter 5 - 마크업 수정](https://github.com/windbella/portfolio-challenge/tree/master/ch5.1)
