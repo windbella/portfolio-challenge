@@ -10,18 +10,14 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
     name: 'Work',
-    data() {
-        return {
-            list: [
-                { key: 1 },
-                { key: 2 },
-                { key: 3 },
-                { key: 4 },
-                { key: 5 },
-            ],
-        };
+    computed: {
+        ...mapState('work', [
+            'list',
+        ]),
     },
-}
+};
 </script>
