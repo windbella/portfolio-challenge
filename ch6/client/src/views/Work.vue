@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="notification">
-            This is a work page
+            <button class="button" @click="add">add</button>
         </div>
         <div class="notification" v-for="item in list" :key="item.key">
             list {{item.key}}
@@ -10,13 +10,18 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 
 export default {
     name: 'Work',
     computed: {
         ...mapState('work', [
             'list',
+        ]),
+    },
+    methods: {
+        ...mapActions('work', [
+            'add',
         ]),
     },
 };

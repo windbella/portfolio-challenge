@@ -8,15 +8,17 @@ const work = {
     state: {
         list: [
             { key: 1 },
-            { key: 2 },
-            { key: 3 },
-            { key: 4 },
-            { key: 5 },
         ],
     },
     mutations: {
+        add(state) {
+            state.list.push({ key: Math.ceil(Math.random() * 10) });
+        },
     },
     actions: {
+        add({ commit }) {
+            commit('add');
+        },
     },
 };
 
