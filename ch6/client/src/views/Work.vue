@@ -1,10 +1,12 @@
 <template>
     <div class="container">
-        <div class="notification">
-            <button class="button" @click="add">add</button>
+        <div class="field">
+            <div class="control">
+                <button class="button" @click="add">add</button>
+            </div>
         </div>
         <div class="notification" v-for="item in list" :key="item.key">
-            list {{item.key}}
+            item {{item.key}}
         </div>
     </div>
 </template>

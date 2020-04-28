@@ -9,10 +9,12 @@ const work = {
         list: [
             { key: 1 },
         ],
+        index: 1,
     },
     mutations: {
         add(state) {
-            state.list.push({ key: Math.ceil(Math.random() * 10) });
+            state.index += 1;
+            state.list.push({ key: state.index });
         },
     },
     actions: {
