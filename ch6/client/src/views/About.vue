@@ -6,7 +6,10 @@
             </div>
         </div>
         <div class="notification" v-if="isShow">
-            This is an about page
+            This is an about page (v-if)
+        </div>
+        <div class="notification" v-show="isShow">
+            This is an about page (v-show)
         </div>
     </div>
 </template>
