@@ -2,7 +2,7 @@
     <div class="container">
         <div class="field">
             <div class="control">
-                <button class="button" @click="add">add</button>
+                <button class="button" @click="test">test</button>
             </div>
         </div>
         <div class="notification" v-for="item in list" :key="item.key">
@@ -23,7 +23,7 @@ export default {
     },
     methods: {
         ...mapActions('work', [
-            'add',
+            'test',
         ]),
     },
 };

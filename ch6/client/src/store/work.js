@@ -13,8 +13,10 @@ const work = {
         },
     },
     actions: {
-        add({ commit }) {
-            commit('add');
+        test({ commit }) {
+            setTimeout(() => {
+                commit('add');
+            }, 1000 * 0.5);
         },
     },
 };
