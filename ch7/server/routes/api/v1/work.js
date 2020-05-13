@@ -3,19 +3,23 @@ const express = require('express');
 const router = express.Router();
 
 router.post('/', (req, res) => {
-    res.send({ description: 'CREATE' });
+    res.sendStatus(200);
 });
 
 router.put('/', (req, res) => {
-    res.send({ description: 'UPDATE' });
+    res.sendStatus(200);
 });
 
 router.get('/', (req, res) => {
-    res.send({ description: 'READ' });
+    res.send({ list: [] });
+});
+
+router.get('/:id', (req, res) => {
+    res.send({ id: req.params.id });
 });
 
 router.delete('/', (req, res) => {
-    res.send({ description: 'DELETE' });
+    res.sendStatus(200);
 });
 
 module.exports = router;
