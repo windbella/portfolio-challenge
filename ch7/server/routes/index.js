@@ -4,9 +4,9 @@ const api = require('./api');
 
 const router = express.Router();
 
-router.use('/api', api);
+router.use('/api/v1', api);
 
-router.get('/*', (req, res) => {
+router.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../../client/dist', 'index.html'));
 });
 
