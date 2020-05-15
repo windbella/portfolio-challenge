@@ -3,28 +3,16 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const sqlite3 = require('sqlite3').verbose();
-
 const routes = require('./routes');
 
+const dbHelper = require('./utilities/db-helper');
+
+const Work = require('./models/work');
+const File = require('./models/file');
+
+dbHelper.initialize(File.schema, Work.schema);
+
 const app = express();
-
-const db = new sqlite3.Database(path.join(__dirname, 'data/db/portfolio.db'));
-
-db.serialize(() => {
-    // db.run('CREATE TABLE lorem (info TEXT)');
-
-    // const stmt = db.prepare('INSERT INTO lorem VALUES (?)');
-    // for (let i = 0; i < 10; i += 1) {
-    //     stmt.run(`Ipsum  ${i}`);
-    // }
-    // stmt.finalize();
-
-    // db.each('SELECT rowid AS id, info FROM lorem', (err, row) => {
-    //     console.log(`${row.id}: ${row.info}`);
-    // });
-});
-db.close();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

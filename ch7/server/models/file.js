@@ -4,6 +4,11 @@ class File {
         console.log('File.constructor', this.name);
     }
 
+    static create(name) {
+        console.log('File.create', name);
+        return { name };
+    }
+
     static findByName(name) {
         console.log('File.findByName', name);
         return { name };
@@ -25,5 +30,13 @@ class File {
         File.deleteByName(this.name);
     }
 }
+
+File.schema = {
+    tableName: 'file',
+    columns: [
+        { name: 'name', type: 'TEXT', isPrimaryKey: true },
+        { name: 'size', type: 'INTEGER' },
+    ],
+};
 
 module.exports = File;
