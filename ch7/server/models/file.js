@@ -1,4 +1,5 @@
 const dbHelper = require('../utilities/db-helper');
+const fileHelper = require('../utilities/file-helper');
 
 class File {
     constructor(name, size) {
@@ -6,9 +7,10 @@ class File {
         this.size = size;
     }
 
-    static async create(name, size) {
-        await dbHelper.create([{ name: 'name', value: name }, { name: 'size', value: size }], File.schema);
-        return new File(name, size);
+    static async create(name, buffer) {
+        await dbHelper.create([{ name: 'name', value: name }, { name: 'size', value: buffer.length }], File.schema);
+        await fileHelper.save(name, buffer);
+        return new File(name, buffer.length);
     }
 
     static async findByName(name) {
@@ -16,13 +18,15 @@ class File {
         return rows.map((row) => new File(row.name, row.size))[0];
     }
 
-    static async updateByName(name, size) {
-        const result = await dbHelper.update([{ name: 'size', value: size }], `name = '${name}'`, File.schema);
+    static async updateByName(name, buffer) {
+        const result = await dbHelper.update([{ name: 'size', value: buffer.length }], `name = '${name}'`, File.schema);
+        await fileHelper.save(name, buffer);
         return result;
     }
 
     static async deleteByName(name) {
         const result = await dbHelper.delete(`name = '${name}'`, File.schema);
+        await fileHelper.remove(name);
         return result;
     }
 

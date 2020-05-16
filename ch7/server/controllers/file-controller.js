@@ -2,7 +2,7 @@ const File = require('../models/file');
 
 const createFile = async (req, res) => {
     try {
-        const file = await File.create(req.params.name, 100);
+        const file = await File.create(req.params.name, req.body);
         res.send(file);
     } catch (e) {
         res.sendStatus(500);
@@ -20,7 +20,7 @@ const readFile = async (req, res) => {
 
 const updateFile = async (req, res) => {
     try {
-        await File.updateByName(req.params.name, 200);
+        await File.updateByName(req.params.name, req.body);
         res.sendStatus(200);
     } catch (e) {
         res.sendStatus(500);
