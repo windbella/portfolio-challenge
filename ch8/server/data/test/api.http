@@ -1,0 +1,39 @@
+POST http://localhost:3000/api/v1/works
+Content-Type: application/json
+
+{ "subject": "work", "content": "work" }
+###
+GET http://localhost:3000/api/v1/works
+###
+GET http://localhost:3000/api/v1/works/1
+###
+PUT http://localhost:3000/api/v1/works/1
+Content-Type: application/json
+
+{ "subject": "work", "content": "work2" }
+####
+DELETE http://localhost:3000/api/v1/works/1
+###
+POST http://localhost:3000/api/v1/files/image.png
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="image.png"
+Content-Type: image/png
+
+< .\image.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+###
+GET http://localhost:3000/api/v1/files/image.png
+###
+PUT http://localhost:3000/api/v1/files/image.png
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="image.png"
+Content-Type: image/png
+
+< .\image.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+###
+DELETE http://localhost:3000/api/v1/files/image.png
