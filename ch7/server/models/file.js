@@ -1,29 +1,33 @@
+const dbHelper = require('../utilities/db-helper');
+
 class File {
-    constructor(name) {
+    constructor(name, size) {
         this.name = name;
-        console.log('File.constructor', this.name);
+        this.size = size;
     }
 
-    static create(name) {
-        console.log('File.create', name);
-        return { name };
+    static async create(name, size) {
+        await dbHelper.create([{ name: 'name', value: name }, { name: 'size', value: size }], File.schema);
+        return new File(name, size);
     }
 
-    static findByName(name) {
-        console.log('File.findByName', name);
-        return { name };
+    static async findByName(name) {
+        const rows = await dbHelper.find(`name = '${name}'`, File.schema);
+        return rows.map((row) => new File(row.name, row.size))[0];
     }
 
-    static updateByName(name) {
-        console.log('File.updateByName', name);
+    static async updateByName(name, size) {
+        const result = await dbHelper.update([{ name: 'size', value: size }], `name = '${name}'`, File.schema);
+        return result;
     }
 
-    static deleteByName(name) {
-        console.log('File.deleteByName', name);
+    static async deleteByName(name) {
+        const result = await dbHelper.delete(`name = '${name}'`, File.schema);
+        return result;
     }
 
     update() {
-        File.updateByName(this.name);
+        File.updateByName(this.name, this.size);
     }
 
     delete() {
@@ -35,7 +39,7 @@ File.schema = {
     tableName: 'file',
     columns: [
         { name: 'name', type: 'TEXT', isPrimaryKey: true },
-        { name: 'size', type: 'INTEGER' },
+        { name: 'size', type: 'INTEGER', isNotNull: true },
     ],
 };
 

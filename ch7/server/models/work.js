@@ -1,34 +1,38 @@
+const dbHelper = require('../utilities/db-helper');
+
 class Work {
-    constructor() {
-        this.id = 1;
-        console.log('Work.constructor', this.id);
+    constructor(id, content) {
+        this.id = id;
+        this.content = content;
     }
 
-    static create() {
-        console.log('Work.create');
-        return {};
+    static async create(content) {
+        const result = await dbHelper.create([{ name: 'content', value: JSON.stringify(content) }], Work.schema);
+        return new Work(result.lastID, content);
     }
 
-    static findAll() {
-        console.log('Work.findAll');
-        return [];
+    static async findAll() {
+        const rows = await dbHelper.find('', Work.schema);
+        return rows.map((row) => new Work(row.id, JSON.parse(row.content)));
     }
 
-    static findById(id) {
-        console.log('Work.findById', id);
-        return { id };
+    static async findById(id) {
+        const rows = await dbHelper.find(`id = ${id}`, Work.schema);
+        return rows.map((row) => new Work(row.id, JSON.parse(row.content)))[0];
     }
 
-    static updateById(id) {
-        console.log('Work.updateById', id);
+    static async updateById(id, content) {
+        const result = await dbHelper.update([{ name: 'content', value: JSON.stringify(content) }], `id = ${id}`, Work.schema);
+        return result;
     }
 
-    static deleteById(id) {
-        console.log('Work.deleteById', id);
+    static async deleteById(id) {
+        const result = await dbHelper.delete(`id = ${id}`, Work.schema);
+        return result;
     }
 
-    update() {
-        Work.updateById(this.id);
+    update(content) {
+        Work.updateById(this.id, content);
     }
 
     delete() {
@@ -45,7 +49,7 @@ Work.schema = {
             isPrimaryKey: true,
             isAutoincrement: true,
         },
-        { name: 'content', type: 'TEXT' },
+        { name: 'content', type: 'TEXT', isNotNull: true },
     ],
 };
 

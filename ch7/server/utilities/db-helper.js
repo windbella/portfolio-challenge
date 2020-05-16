@@ -7,10 +7,9 @@ const dbHelper = {
     initialize(...schemas) {
         const sqls = schemas.map((schema) => {
             const { tableName } = schema;
-            const columns = schema.columns.map((column) => `${column.name} ${column.type}${column.isPrimaryKey ? ' PRIMARY KEY' : ''}${column.isAutoincrement ? ' AUTOINCREMENT' : ''}`).join(', ');
+            const columns = schema.columns.map((column) => `${column.name} ${column.type}${column.isPrimaryKey ? ' PRIMARY KEY' : ''}${column.isAutoincrement ? ' AUTOINCREMENT' : ''}${column.isNotNull ? ' NOT NULL' : ''}`).join(', ');
             return `CREATE TABLE IF NOT EXISTS ${tableName} (${columns})`;
         });
-
 
         db.serialize(() => {
             sqls.forEach((sql) => {
