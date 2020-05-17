@@ -22,15 +22,15 @@
 
             <div class="navbar-menu" :class="{ 'is-active': isActive }">
                 <div class="navbar-start">
-                    <router-link to="/home" class="navbar-item">
+                    <router-link to="/home" class="navbar-item" @click.native="closeMenu">
                         Home
                     </router-link>
 
-                    <router-link to="/work" class="navbar-item">
+                    <router-link to="/work" class="navbar-item" @click.native="closeMenu">
                         Work
                     </router-link>
 
-                    <router-link to="/about" class="navbar-item">
+                    <router-link to="/about" class="navbar-item" @click.native="closeMenu">
                         About
                     </router-link>
                 </div>
@@ -55,8 +55,13 @@ export default {
     },
     methods: {
         toggleMenu(event) {
+            console.log('hi?');
             event.preventDefault();
             this.isActive = !this.isActive;
+        },
+        closeMenu(event) {
+            event.preventDefault();
+            this.isActive = false;
         },
     },
 };

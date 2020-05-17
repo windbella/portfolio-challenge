@@ -1,22 +1,29 @@
+import axios from 'axios';
+
 const work = {
     namespaced: true,
     state: {
-        list: [
-            { key: 1 },
-        ],
-        index: 1,
+        status: 'INIT',
+        list: [],
     },
     mutations: {
-        add(state) {
-            state.index += 1;
-            state.list.push({ key: state.index });
+        setStatus(state, payload) {
+            state.status = payload.status;
+        },
+        setList(state, payload) {
+            state.list = payload.list;
         },
     },
     actions: {
-        test({ commit }) {
-            setTimeout(() => {
-                commit('add');
-            }, 1000 * 0.5);
+        async load({ commit }) {
+            commit('setStatus', { status: 'WAITING' });
+            try {
+                const response = await axios.get('/api/v1/works');
+                commit('setList', { list: response.data });
+                commit('setStatus', { status: 'SUCCESS' });
+            } catch (e) {
+                commit('setStatus', { status: 'FAILURE' });
+            }
         },
     },
 };

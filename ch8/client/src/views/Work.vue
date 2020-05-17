@@ -1,30 +1,27 @@
 <template>
     <div class="container">
-        <div class="field">
-            <div class="control">
-                <button class="button" @click="test">test</button>
-            </div>
-        </div>
-        <div class="notification" v-for="item in list" :key="item.key">
-            item {{item.key}}
-        </div>
+        <h1 class="title">Work</h1>
+        <WorkList
+            :status="status"
+            :list="list"
+        />
     </div>
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
+import { mapState } from 'vuex';
+import WorkList from '../components/WorkList.vue';
 
 export default {
     name: 'Work',
     computed: {
         ...mapState('work', [
+            'status',
             'list',
         ]),
     },
-    methods: {
-        ...mapActions('work', [
-            'test',
-        ]),
+    components: {
+        WorkList,
     },
 };
 </script>

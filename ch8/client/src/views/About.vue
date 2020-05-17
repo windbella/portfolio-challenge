@@ -1,31 +1,17 @@
 <template>
     <div class="container">
-        <div class="field">
-            <div class="control">
-                <button class="button" @click="toggle">toggle</button>
-            </div>
-        </div>
-        <div class="notification" v-if="isShow">
-            This is an about page (v-if)
-        </div>
-        <div class="notification" v-show="isShow">
-            This is an about page (v-show)
-        </div>
+        <h1 class="title">About</h1>
+        <AboutContent />
     </div>
 </template>
 
 <script>
+import AboutContent from '../components/AboutContent.vue';
+
 export default {
     name: 'Work',
-    data() {
-        return {
-            isShow: true,
-        };
-    },
-    methods: {
-        toggle() {
-            this.isShow = !this.isShow;
-        },
+    components: {
+        AboutContent,
     },
 };
 </script>
