@@ -20,7 +20,7 @@ import HomeList from '../components/HomeList.vue';
 import WorkList from '../components/WorkList.vue';
 
 export default {
-    name: 'Home',
+    name: 'HomeView',
     computed: {
         ...mapState('home', {
             homeStatus: 'status',

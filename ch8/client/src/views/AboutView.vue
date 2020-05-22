@@ -9,7 +9,7 @@
 import AboutContent from '../components/AboutContent.vue';
 
 export default {
-    name: 'Work',
+    name: 'AboutView',
     components: {
         AboutContent,
     },
