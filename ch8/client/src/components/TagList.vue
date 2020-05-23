@@ -1,6 +1,14 @@
 <template>
-    <div>
-        <TagItem/>
+    <div class="tabs">
+        <ul>
+            <TagItem class="is-active" />
+            <TagItem />
+            <TagItem />
+            <TagItem />
+            <TagItem />
+            <TagItem />
+            <TagItem />
+        </ul>
     </div>
 </template>
 

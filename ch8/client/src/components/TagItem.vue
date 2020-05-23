@@ -1,7 +1,5 @@
 <template>
-    <div class="notification">
-        Tag
-    </div>
+    <li><a>Tag</a></li>
 </template>
 
 <script>

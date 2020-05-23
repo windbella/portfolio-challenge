@@ -1,7 +1,6 @@
 <template>
     <div class="container">
         <TagListContainer />
-        <hr />
         <h1 class="title">Work</h1>
         <WorkList
             :status="status"
