@@ -1,13 +1,12 @@
 <template>
-    <div class="tabs">
+    <div class="tabs" v-if="status === 'SUCCESS'">
         <ul>
-            <TagItem class="is-active" />
-            <TagItem />
-            <TagItem />
-            <TagItem />
-            <TagItem />
-            <TagItem />
-            <TagItem />
+            <TagItem
+                v-for="item in list"
+                :item="item"
+                :key="item.name"
+                :toggleTag="toggleTag"
+            />
         </ul>
     </div>
 </template>
@@ -20,6 +19,7 @@ export default {
     props: {
         status: String,
         list: Array,
+        toggleTag: Function,
     },
     components: {
         TagItem,

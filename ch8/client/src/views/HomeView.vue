@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
 import HomeList from '../components/HomeList.vue';
 import WorkList from '../components/WorkList.vue';
 
@@ -29,6 +29,9 @@ export default {
         ...mapState('work', {
             workStatus: 'status',
             workList: 'list',
+        }),
+        ...mapGetters('work', {
+            workList: 'mainList',
         }),
     },
     components: {

@@ -2,18 +2,27 @@
     <div class="card has-margin-bottom">
         <div class="card-image">
             <figure class="image is-2by1">
-                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                <img :src="content.image" alt="Placeholder image">
             </figure>
         </div>
         <div class="card-content">
             <div class="content">
-                <p class="title is-4">Title</p>
-                <p class="subtitle is-6">Subtitle</p>
-                Content {{content}}
+                <p class="title is-4">{{content.title}}</p>
+                <p class="subtitle is-6 has-text-grey">{{content.subtitle}}</p>
+                <div v-html="content.content"/>
                 <br />
-                <a href="#">#tag</a> <a href="#">#tag</a> <a href="#">#tag</a>
-                <br />
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                <div>
+                    <a href="#" v-for="(tag, index) in content.tags" :key="index">
+                        #{{tag}}
+                    </a>
+                </div>
+                <time :datetime="content.startDate">
+                    {{new Date(content.startDate).toDateString()}}
+                </time>
+                ~
+                <time :datetime="content.endDate">
+                    {{new Date(content.startDate).toDateString()}}
+                </time>
             </div>
         </div>
     </div>

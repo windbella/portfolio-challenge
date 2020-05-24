@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
 import TagListContainer from '../containers/TagListContainer.vue';
 import WorkList from '../components/WorkList.vue';
 
@@ -19,8 +19,10 @@ export default {
     computed: {
         ...mapState('work', [
             'status',
-            'list',
         ]),
+        ...mapGetters('work', {
+            list: 'activeList',
+        }),
     },
     components: {
         TagListContainer,

@@ -12,7 +12,7 @@
                     :class="{ 'is-active': isActive }"
                     aria-label="menu"
                     :aria-expanded="isActive.toString()"
-                    @click="toggleMenu"
+                    @click.prevent="toggleMenu"
                 >
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -55,7 +55,6 @@ export default {
     },
     methods: {
         toggleMenu(event) {
-            console.log('hi?');
             event.preventDefault();
             this.isActive = !this.isActive;
         },

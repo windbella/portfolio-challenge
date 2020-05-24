@@ -7,7 +7,7 @@ import './main.css';
 
 Vue.config.productionTip = false;
 
-axios.defaults.baseURL = process.env.VUE_APP_API_URL;
+axios.defaults.baseURL = process.env.VUE_APP_BASE_URL;
 
 new Vue({
     router,

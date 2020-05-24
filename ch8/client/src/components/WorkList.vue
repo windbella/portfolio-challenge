@@ -1,10 +1,15 @@
 <template>
-    <div v-if="status === 'SUCCESS'">
-        <WorkItem
-            v-for="item in list"
-            :key="item.id"
-            :content="item.content"
-        />
+    <div class="columns is-multiline" v-if="status === 'SUCCESS' && list.length > 0">
+        <div class="column is-half" v-for="item in list" :key="item.id">
+            <WorkItem
+                :content="item.content"
+            />
+        </div>
+    </div>
+    <div v-else-if="status === 'SUCCESS'">
+        <div class="notification">
+            조회된 목록이 없습니다.
+        </div>
     </div>
     <div v-else-if="status === 'FAILURE'">
         <div class="notification">
