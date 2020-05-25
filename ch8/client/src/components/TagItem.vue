@@ -1,6 +1,9 @@
 <template>
-    <li :class="{ ['is-active']: item.isActive }">
-        <a @click.prevent="toggleTag(item)">
+    <li
+        :class="{ ['is-active']: item.isActive, 'has-background-white': true }"
+        @click.prevent="toggleTag(item)"
+    >
+        <a>
             {{item.name}}
         </a>
     </li>
