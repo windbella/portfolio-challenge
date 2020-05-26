@@ -12,9 +12,9 @@
                 <div v-html="content.content"/>
                 <br />
                 <div>
-                    <a href="#" v-for="(tag, index) in content.tags" :key="index">
+                    <span class="has-text-link" v-for="(tag, index) in content.tags" :key="index">
                         #{{tag}}
-                    </a>
+                    </span>
                 </div>
                 <time :datetime="content.startDate">
                     {{new Date(content.startDate).toDateString()}}
