@@ -1,12 +1,10 @@
 <template>
-    <li
-        :class="{ ['is-active']: item.isActive, 'has-background-white': true }"
+    <button
+        :class="{ button: true, ['is-primary is-light is-active']: item.isActive }"
         @click.prevent="toggleTag(item)"
     >
-        <a>
-            {{item.name}}
-        </a>
-    </li>
+        #{{item.name}}
+    </button>
 </template>
 
 <script>

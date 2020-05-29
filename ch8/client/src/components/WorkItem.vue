@@ -36,9 +36,3 @@ export default {
     },
 };
 </script>
-
-<style scoped>
-    .has-margin-bottom {
-        margin-bottom: 1.5em;
-    }
-</style>

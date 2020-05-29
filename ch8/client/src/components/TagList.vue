@@ -1,13 +1,9 @@
 <template>
-    <div class="tabs" v-if="status === 'SUCCESS'">
-        <ul>
-            <TagItem
-                v-for="item in list"
-                :item="item"
-                :key="item.name"
-                :toggleTag="toggleTag"
-            />
+    <div v-if="status === 'SUCCESS'">
+        <ul class="buttons">
+            <TagItem v-for="item in list" :item="item" :key="item.name" :toggleTag="toggleTag" />
         </ul>
+        <hr />
     </div>
 </template>
 
@@ -26,3 +22,15 @@ export default {
     },
 };
 </script>
+
+<style scoped>
+    hr {
+        margin: 0 0 1.5rem
+    }
+    ul.buttons {
+        display: block;
+        padding: 0.15rem;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+</style>
