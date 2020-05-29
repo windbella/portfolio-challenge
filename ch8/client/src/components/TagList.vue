@@ -30,6 +30,7 @@ export default {
     ul.buttons {
         display: block;
         padding: 0.15rem;
+        margin-bottom: 0.5rem;
         overflow-x: auto;
         white-space: nowrap;
     }
