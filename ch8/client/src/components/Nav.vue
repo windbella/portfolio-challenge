@@ -36,7 +36,12 @@
                 </div>
 
                 <div class="navbar-end">
-                    <a class="navbar-item">
+                    <a
+                        class="navbar-item"
+                        :href="resumeUrl"
+                        target="_blank"
+                        @click="closeMenu"
+                    >
                         Resume
                     </a>
                 </div>
@@ -50,16 +55,15 @@ export default {
     name: 'Nav',
     data() {
         return {
+            resumeUrl: `${process.env.VUE_APP_BASE_URL}/uploads/resume.pdf`,
             isActive: false,
         };
     },
     methods: {
-        toggleMenu(event) {
-            event.preventDefault();
+        toggleMenu() {
             this.isActive = !this.isActive;
         },
-        closeMenu(event) {
-            event.preventDefault();
+        closeMenu() {
             this.isActive = false;
         },
     },
