@@ -117,4 +117,4 @@ app.use('/', routes);
 - https://github.com/windbella/portfolio-challenge/compare/ac38c44012129f5b16605823024ad631cc16a3a7...b92a8d58e95b4a5f87e081479b01bd2cf7196c5c
 ## 링크
 - [Chepter 6 - 렌더링과 뷰엑스 배우기](https://github.com/windbella/portfolio-challenge/tree/master/ch6)
-
+- [Chepter 8 - 클라이언트에서 API 사용하기, 컨테이너와 컴포넌트](https://github.com/windbella/portfolio-challenge/tree/master/ch8)
