@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const logger = require('morgan');
 const dotenv = require('dotenv');
+const simpleBasicAuth = require('./utilities/simple-basic-auth');
 const routes = require('./routes');
 const dbHelper = require('./utilities/db-helper');
 const fileHelper = require('./utilities/file-helper');
@@ -37,6 +38,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../client', 'dist'), { index: false }));
 app.use('/uploads', express.static(fileHelper.dirPath));
+app.use(simpleBasicAuth('test', '1234'));
 app.use('/', routes);
 
 // catch 404 and forward to error handler
