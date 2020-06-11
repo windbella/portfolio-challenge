@@ -1,6 +1,5 @@
 module.exports = function auth(user, password) {
     return (req, res, next) => {
-        console.log(user, password);
         if (req.method === 'GET') {
             next();
         } else {
