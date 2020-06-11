@@ -76,3 +76,4 @@ axios.defaults.baseURL = process.env.VUE_APP_BASE_URL;
 - https://github.com/windbella/portfolio-challenge/compare/95d4dbe7d2135dfe4156e723ee4c5a6f4bd0edf3...b2535aee6359f816c68cabf7b06c752d9cdbb777
 ## 링크
 - [Chepter 7 - 서버에서 API 제공하기](https://github.com/windbella/portfolio-challenge/tree/master/ch7)
+- [Chepter 9 - 인증과 미들웨어](https://github.com/windbella/portfolio-challenge/tree/master/ch9)
