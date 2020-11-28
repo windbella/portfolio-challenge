@@ -53,4 +53,4 @@ CMD node ./server/bin/www
 ## 변경점 확인하기
 - https://github.com/windbella/portfolio-challenge/compare/fa6ac13859311e9917c484e40dd2ed1d543ca39a...9f4f2ac4da70e5a2d77f8e85c6bca5ab36499c98
 ## 링크
-- [Chepter 9 - 인증과 미들웨어](https://github.com/windbella/portfolio-challenge/tree/master/ch10)
+- [Chepter 9 - 인증과 미들웨어](https://github.com/windbella/portfolio-challenge/tree/master/ch9)
